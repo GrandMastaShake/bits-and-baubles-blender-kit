@@ -1,0 +1,6 @@
+# Normalize line endings to LF in the repo; checkout as-is on all platforms
+* text=auto eol=lf
+
+# Blender files — treat as binary to avoid diff noise
+*.blend  binary
+*.blend1 binary
