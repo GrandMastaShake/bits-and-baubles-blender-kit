@@ -159,7 +159,10 @@ def get_material(color_name: str) -> bpy.types.Material:
     rgba = PIECE_COLORS.get(color_name, PIECE_COLORS["gray"])
     principled.inputs["Base Color"].default_value = rgba
     principled.inputs["Roughness"].default_value = 0.3
-    principled.inputs["Specular"].default_value = 0.5
+    # Blender 4.0 renamed "Specular" to "Specular IOR Level"
+    specular_key = "Specular IOR Level" if "Specular IOR Level" in principled.inputs else "Specular"
+    if specular_key in principled.inputs:
+        principled.inputs[specular_key].default_value = 0.5
     _material_cache[color_name] = mat
     return mat
 
