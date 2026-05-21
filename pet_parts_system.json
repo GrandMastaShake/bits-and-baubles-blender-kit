@@ -1,0 +1,742 @@
+{
+  "_meta": {
+    "name": "Bits and Baubles — Modular Pet Parts System",
+    "version": "1.0.0",
+    "description": "Mix-and-match pet part library for procedural creature generation. Compatible with Adopt Me-style low-poly pets.",
+    "format": "Each part defines geometry, attachment points, and compatible species.",
+    "units": "Blender units (1 stud = 0.008)",
+    "author": "Centuria Forge Swarm"
+  },
+
+  "part_categories": {
+    "head": {
+      "description": "Head shapes — determines species family",
+      "attachment": "connects_to: neck",
+      "slot": "single"
+    },
+    "ears": {
+      "description": "Ear styles — floppy, pointy, round",
+      "attachment": "connects_to: head.sides",
+      "slot": "pair"
+    },
+    "eyes": {
+      "description": "Eye styles — determines expression",
+      "attachment": "connects_to: head.front",
+      "slot": "pair"
+    },
+    "snout": {
+      "description": "Snout/muzzle — determines eating animation",
+      "attachment": "connects_to: head.front_bottom",
+      "slot": "single"
+    },
+    "body": {
+      "description": "Body shape — determines size class",
+      "attachment": "connects_to: root",
+      "slot": "single"
+    },
+    "legs": {
+      "description": "Leg styles — walk/run animation",
+      "attachment": "connects_to: body.bottom",
+      "slot": "quad"
+    },
+    "tail": {
+      "description": "Tail styles — wag/emote animation",
+      "attachment": "connects_to: body.rear",
+      "slot": "single"
+    },
+    "wings": {
+      "description": "Wing styles — for flying pets",
+      "attachment": "connects_to: body.top",
+      "slot": "pair"
+    },
+    "horns": {
+      "description": "Horn/antler styles — decorative",
+      "attachment": "connects_to: head.top",
+      "slot": "pair_or_single"
+    },
+    "pattern": {
+      "description": "Color pattern — stripes, spots, solid",
+      "attachment": "applies_to: all",
+      "slot": "overlay"
+    }
+  },
+
+  "parts": {
+    "head": [
+      {
+        "id": "head_round",
+        "name": "Round Head",
+        "family": "mammal",
+        "geometry": {
+          "type": "Brick_2x2",
+          "scale": [1.5, 1.2, 1.5],
+          "studs_on_top": false
+        },
+        "expression": "friendly",
+        "compatible_with": ["ears_floppy", "ears_pointy", "ears_round", "snout_short", "snout_long", "snout_broad"],
+        "rarity": "common",
+        "thumbnail_color": "#D2B48C"
+      },
+      {
+        "id": "head_square",
+        "name": "Square Head",
+        "family": "mammal",
+        "geometry": {
+          "type": "Brick_2x2",
+          "scale": [1.3, 1.0, 1.3],
+          "studs_on_top": false
+        },
+        "expression": "determined",
+        "compatible_with": ["ears_pointy", "ears_floppy", "snout_short", "snout_broad"],
+        "rarity": "common",
+        "thumbnail_color": "#8B7355"
+      },
+      {
+        "id": "head_triangular",
+        "name": "Triangular Head",
+        "family": "reptile",
+        "geometry": {
+          "type": "Wedge_2x2",
+          "scale": [1.4, 1.1, 1.4],
+          "rotation": [0, 0, 0]
+        },
+        "expression": "sharp",
+        "compatible_with": ["snout_long", "horns_simple", "eyes_narrow"],
+        "rarity": "uncommon",
+        "thumbnail_color": "#4A7C59"
+      },
+      {
+        "id": "head_oval",
+        "name": "Oval Head",
+        "family": "avian",
+        "geometry": {
+          "type": "Brick_2x2",
+          "scale": [1.2, 1.5, 1.0],
+          "studs_on_top": false
+        },
+        "expression": "curious",
+        "compatible_with": ["beak_small", "beak_large", "eyes_wide"],
+        "rarity": "uncommon",
+        "thumbnail_color": "#6B8E9F"
+      },
+      {
+        "id": "head_blocky",
+        "name": "Blocky Head",
+        "family": "robot",
+        "geometry": {
+          "type": "Brick_2x2",
+          "scale": [1.4, 1.3, 1.4],
+          "studs_on_top": true
+        },
+        "expression": "neutral",
+        "compatible_with": ["antenna_single", "antenna_double", "eyes_glowing"],
+        "rarity": "rare",
+        "thumbnail_color": "#888888"
+      },
+      {
+        "id": "head_heart",
+        "name": "Heart-Shaped Head",
+        "family": "magical",
+        "geometry": {
+          "type": "Macaroni_2x2",
+          "scale": [1.5, 1.3, 1.5],
+          "mirror": true
+        },
+        "expression": "loving",
+        "compatible_with": ["ears_round", "horns_unicorn", "eyes_sparkle"],
+        "rarity": "legendary",
+        "thumbnail_color": "#FF69B4"
+      }
+    ],
+
+    "ears": [
+      {
+        "id": "ears_floppy",
+        "name": "Floppy Ears",
+        "geometry": {
+          "type": "Plate_1x2",
+          "scale": [0.8, 1.5, 0.5],
+          "rotation_offset": [15, 0, 0]
+        },
+        "animation": "flop_idle",
+        "rarity": "common"
+      },
+      {
+        "id": "ears_pointy",
+        "name": "Pointy Ears",
+        "geometry": {
+          "type": "Slope_2x1_45",
+          "scale": [0.6, 1.2, 0.6],
+          "rotation_offset": [0, 0, 0]
+        },
+        "animation": "twitch_alert",
+        "rarity": "common"
+      },
+      {
+        "id": "ears_round",
+        "name": "Round Ears",
+        "geometry": {
+          "type": "Round_1x1",
+          "scale": [1.0, 1.0, 1.0],
+          "rotation_offset": [0, 0, 0]
+        },
+        "animation": "rotate_curious",
+        "rarity": "common"
+      },
+      {
+        "id": "ears_long",
+        "name": "Long Ears",
+        "geometry": {
+          "type": "Plate_1x2",
+          "scale": [0.6, 2.5, 0.4],
+          "rotation_offset": [10, 0, 0]
+        },
+        "animation": "sway_gentle",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "ears_feathered",
+        "name": "Feathered Ears",
+        "geometry": {
+          "type": "Tile_1x2",
+          "scale": [0.5, 1.8, 0.3],
+          "rotation_offset": [20, 0, 0]
+        },
+        "animation": "flutter_fast",
+        "rarity": "rare"
+      }
+    ],
+
+    "eyes": [
+      {
+        "id": "eyes_round",
+        "name": "Round Eyes",
+        "geometry": {
+          "type": "Round_1x1",
+          "scale": [0.8, 0.8, 0.3],
+          "pupil": true
+        },
+        "expression": "friendly",
+        "rarity": "common"
+      },
+      {
+        "id": "eyes_narrow",
+        "name": "Narrow Eyes",
+        "geometry": {
+          "type": "Tile_1x1",
+          "scale": [1.2, 0.4, 0.3],
+          "pupil": true
+        },
+        "expression": "mischievous",
+        "rarity": "common"
+      },
+      {
+        "id": "eyes_wide",
+        "name": "Wide Eyes",
+        "geometry": {
+          "type": "Round_1x1",
+          "scale": [1.0, 1.0, 0.4],
+          "pupil": true
+        },
+        "expression": "surprised",
+        "rarity": "common"
+      },
+      {
+        "id": "eyes_glowing",
+        "name": "Glowing Eyes",
+        "geometry": {
+          "type": "Round_1x1",
+          "scale": [0.9, 0.9, 0.3],
+          "emissive": true,
+          "glow_color": "#00FF00"
+        },
+        "expression": "otherworldly",
+        "rarity": "rare"
+      },
+      {
+        "id": "eyes_sparkle",
+        "name": "Sparkle Eyes",
+        "geometry": {
+          "type": "Round_1x1",
+          "scale": [1.0, 1.0, 0.4],
+          "emissive": true,
+          "glow_color": "#FFD700",
+          "sparkle": true
+        },
+        "expression": "magical",
+        "rarity": "legendary"
+      }
+    ],
+
+    "snout": [
+      {
+        "id": "snout_short",
+        "name": "Short Snout",
+        "geometry": {
+          "type": "Brick_1x1",
+          "scale": [0.8, 0.6, 0.8],
+          "studs_on_top": false
+        },
+        "rarity": "common"
+      },
+      {
+        "id": "snout_long",
+        "name": "Long Snout",
+        "geometry": {
+          "type": "Brick_1x2",
+          "scale": [0.7, 0.6, 1.5],
+          "studs_on_top": false
+        },
+        "rarity": "common"
+      },
+      {
+        "id": "snout_broad",
+        "name": "Broad Snout",
+        "geometry": {
+          "type": "Brick_2x2",
+          "scale": [1.2, 0.5, 1.0],
+          "studs_on_top": false
+        },
+        "rarity": "common"
+      },
+      {
+        "id": "beak_small",
+        "name": "Small Beak",
+        "geometry": {
+          "type": "Slope_2x1_45",
+          "scale": [0.5, 0.5, 0.8],
+          "rotation_offset": [0, 90, 0]
+        },
+        "rarity": "common"
+      },
+      {
+        "id": "beak_large",
+        "name": "Large Beak",
+        "geometry": {
+          "type": "Slope_2x2_33",
+          "scale": [0.7, 0.7, 1.2],
+          "rotation_offset": [0, 90, 0]
+        },
+        "rarity": "uncommon"
+      }
+    ],
+
+    "body": [
+      {
+        "id": "body_small",
+        "name": "Small Body",
+        "size_class": "tiny",
+        "geometry": {
+          "type": "Brick_2x2",
+          "scale": [1.0, 0.8, 1.2]
+        },
+        "leg_attachment_points": 4,
+        "rarity": "common"
+      },
+      {
+        "id": "body_medium",
+        "name": "Medium Body",
+        "size_class": "medium",
+        "geometry": {
+          "type": "Brick_2x4",
+          "scale": [1.2, 1.0, 1.5]
+        },
+        "leg_attachment_points": 4,
+        "rarity": "common"
+      },
+      {
+        "id": "body_large",
+        "name": "Large Body",
+        "size_class": "large",
+        "geometry": {
+          "type": "Brick_2x4",
+          "scale": [1.5, 1.3, 2.0]
+        },
+        "leg_attachment_points": 4,
+        "rarity": "uncommon"
+      },
+      {
+        "id": "body_chubby",
+        "name": "Chubby Body",
+        "size_class": "medium",
+        "geometry": {
+          "type": "Brick_2x2",
+          "scale": [1.4, 1.1, 1.4]
+        },
+        "leg_attachment_points": 4,
+        "rarity": "common"
+      },
+      {
+        "id": "body_long",
+        "name": "Long Body",
+        "size_class": "medium",
+        "geometry": {
+          "type": "Brick_2x4",
+          "scale": [1.0, 0.9, 2.5]
+        },
+        "leg_attachment_points": 4,
+        "rarity": "uncommon"
+      },
+      {
+        "id": "body_winged",
+        "name": "Winged Body",
+        "size_class": "medium",
+        "geometry": {
+          "type": "Brick_2x4",
+          "scale": [1.2, 1.0, 1.5]
+        },
+        "leg_attachment_points": 2,
+        "wing_attachment_points": 2,
+        "rarity": "rare"
+      }
+    ],
+
+    "legs": [
+      {
+        "id": "legs_short",
+        "name": "Short Legs",
+        "geometry": {
+          "type": "Brick_1x1",
+          "scale": [0.6, 1.5, 0.6],
+          "studs_on_top": true
+        },
+        "walk_cycle": "waddle",
+        "rarity": "common"
+      },
+      {
+        "id": "legs_long",
+        "name": "Long Legs",
+        "geometry": {
+          "type": "Brick_1x1",
+          "scale": [0.5, 2.5, 0.5],
+          "studs_on_top": true
+        },
+        "walk_cycle": "trot",
+        "rarity": "common"
+      },
+      {
+        "id": "legs_stubby",
+        "name": "Stubby Legs",
+        "geometry": {
+          "type": "Plate_1x1",
+          "scale": [0.8, 0.8, 0.8],
+          "studs_on_top": true
+        },
+        "walk_cycle": "shuffle",
+        "rarity": "common"
+      },
+      {
+        "id": "legs_paws",
+        "name": "Paw Legs",
+        "geometry": {
+          "type": "Brick_1x1",
+          "scale": [0.7, 1.2, 0.7],
+          "studs_on_top": true
+        },
+        "walk_cycle": "prance",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "legs_hooves",
+        "name": "Hoof Legs",
+        "geometry": {
+          "type": "Brick_1x1",
+          "scale": [0.5, 2.0, 0.5],
+          "studs_on_top": true
+        },
+        "walk_cycle": "gallop",
+        "rarity": "uncommon"
+      }
+    ],
+
+    "tail": [
+      {
+        "id": "tail_short",
+        "name": "Short Tail",
+        "geometry": {
+          "type": "Brick_1x1",
+          "scale": [0.6, 0.8, 0.6]
+        },
+        "animation": "wag_slow",
+        "rarity": "common"
+      },
+      {
+        "id": "tail_long",
+        "name": "Long Tail",
+        "geometry": {
+          "type": "Brick_1x2",
+          "scale": [0.5, 1.0, 2.0]
+        },
+        "animation": "wag_fast",
+        "rarity": "common"
+      },
+      {
+        "id": "tail_fluffy",
+        "name": "Fluffy Tail",
+        "geometry": {
+          "type": "Round_1x1",
+          "scale": [1.2, 1.2, 1.2]
+        },
+        "animation": "bounce_happy",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "tail_curled",
+        "name": "Curled Tail",
+        "geometry": {
+          "type": "Macaroni_2x2",
+          "scale": [0.8, 0.8, 1.0]
+        },
+        "animation": "uncurl_excited",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "tail_feathered",
+        "name": "Feathered Tail",
+        "geometry": {
+          "type": "Tile_1x2",
+          "scale": [0.5, 0.3, 2.5]
+        },
+        "animation": "flutter_elegant",
+        "rarity": "rare"
+      },
+      {
+        "id": "tail_spiked",
+        "name": "Spiked Tail",
+        "geometry": {
+          "type": "Slope_2x1_45",
+          "scale": [0.6, 0.8, 1.5]
+        },
+        "animation": "swish_defensive",
+        "rarity": "rare"
+      }
+    ],
+
+    "wings": [
+      {
+        "id": "wings_small",
+        "name": "Small Wings",
+        "geometry": {
+          "type": "Tile_1x2",
+          "scale": [0.3, 0.1, 2.0]
+        },
+        "animation": "flutter_fast",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "wings_large",
+        "name": "Large Wings",
+        "geometry": {
+          "type": "Tile_2x2",
+          "scale": [0.3, 0.1, 3.0]
+        },
+        "animation": "soar_slow",
+        "rarity": "rare"
+      },
+      {
+        "id": "wings_butterfly",
+        "name": "Butterfly Wings",
+        "geometry": {
+          "type": "Tile_2x2",
+          "scale": [0.2, 0.1, 2.5],
+          "pattern": "gradient"
+        },
+        "animation": "flutter_gentle",
+        "rarity": "legendary"
+      }
+    ],
+
+    "horns": [
+      {
+        "id": "horns_simple",
+        "name": "Simple Horns",
+        "geometry": {
+          "type": "Slope_2x1_45",
+          "scale": [0.5, 1.0, 0.5]
+        },
+        "count": 2,
+        "rarity": "uncommon"
+      },
+      {
+        "id": "horns_unicorn",
+        "name": "Unicorn Horn",
+        "geometry": {
+          "type": "Slope_2x1_45",
+          "scale": [0.6, 1.5, 0.6]
+        },
+        "count": 1,
+        "rarity": "legendary"
+      },
+      {
+        "id": "horns_antlers",
+        "name": "Antlers",
+        "geometry": {
+          "type": "Bar_1x2",
+          "scale": [1.5, 0.8, 1.5]
+        },
+        "count": 2,
+        "rarity": "rare"
+      }
+    ],
+
+    "pattern": [
+      {
+        "id": "pattern_solid",
+        "name": "Solid Color",
+        "type": "uniform",
+        "rarity": "common"
+      },
+      {
+        "id": "pattern_striped",
+        "name": "Striped",
+        "type": "horizontal_bands",
+        "colors": 2,
+        "rarity": "common"
+      },
+      {
+        "id": "pattern_spotted",
+        "name": "Spotted",
+        "type": "random_dots",
+        "colors": 2,
+        "rarity": "common"
+      },
+      {
+        "id": "pattern_gradient",
+        "name": "Gradient",
+        "type": "vertical_fade",
+        "colors": 2,
+        "rarity": "uncommon"
+      },
+      {
+        "id": "pattern_galaxy",
+        "name": "Galaxy",
+        "type": "noise_texture",
+        "colors": 4,
+        "sparkle": true,
+        "rarity": "legendary"
+      }
+    ]
+  },
+
+  "compatibility_matrix": {
+    "head_round": {
+      "ears": ["ears_floppy", "ears_pointy", "ears_round", "ears_long"],
+      "snout": ["snout_short", "snout_long", "snout_broad"],
+      "horns": ["horns_simple", "horns_unicorn"]
+    },
+    "head_triangular": {
+      "ears": ["ears_pointy"],
+      "snout": ["snout_long"],
+      "horns": ["horns_simple", "horns_antlers"]
+    },
+    "head_oval": {
+      "ears": ["ears_round", "ears_feathered"],
+      "snout": ["beak_small", "beak_large"],
+      "horns": []
+    },
+    "head_blocky": {
+      "ears": ["ears_round"],
+      "snout": ["snout_broad"],
+      "horns": ["antenna_single", "antenna_double"]
+    }
+  },
+
+  "prebuilt_pets": [
+    {
+      "name": "Golden Retriever",
+      "parts": {
+        "head": "head_round",
+        "ears": "ears_floppy",
+        "eyes": "eyes_round",
+        "snout": "snout_long",
+        "body": "body_medium",
+        "legs": "legs_short",
+        "tail": "tail_long",
+        "pattern": "pattern_solid"
+      },
+      "colors": {"primary": "#D2B48C", "secondary": "#F5DEB3"},
+      "rarity": "common"
+    },
+    {
+      "name": "Shadow Wolf",
+      "parts": {
+        "head": "head_triangular",
+        "ears": "ears_pointy",
+        "eyes": "eyes_narrow",
+        "snout": "snout_long",
+        "body": "body_large",
+        "legs": "legs_long",
+        "tail": "tail_fluffy",
+        "pattern": "pattern_gradient"
+      },
+      "colors": {"primary": "#2C2C2C", "secondary": "#555555"},
+      "rarity": "rare"
+    },
+    {
+      "name": "Phoenix",
+      "parts": {
+        "head": "head_oval",
+        "ears": "ears_feathered",
+        "eyes": "eyes_glowing",
+        "snout": "beak_large",
+        "body": "body_winged",
+        "legs": "legs_stubby",
+        "tail": "tail_feathered",
+        "wings": "wings_large",
+        "pattern": "pattern_gradient"
+      },
+      "colors": {"primary": "#FF6600", "secondary": "#FFD700", "accent": "#FF0000"},
+      "rarity": "legendary"
+    },
+    {
+      "name": "Cyber Pup",
+      "parts": {
+        "head": "head_blocky",
+        "ears": "ears_round",
+        "eyes": "eyes_glowing",
+        "snout": "snout_broad",
+        "body": "body_small",
+        "legs": "legs_short",
+        "tail": "tail_short",
+        "pattern": "pattern_solid"
+      },
+      "colors": {"primary": "#888888", "secondary": "#00FF00", "accent": "#333333"},
+      "rarity": "rare"
+    },
+    {
+      "name": "Rainbow Unicorn",
+      "parts": {
+        "head": "head_heart",
+        "ears": "ears_round",
+        "eyes": "eyes_sparkle",
+        "snout": "snout_short",
+        "body": "body_chubby",
+        "legs": "legs_short",
+        "tail": "tail_fluffy",
+        "horns": "horns_unicorn",
+        "pattern": "pattern_galaxy"
+      },
+      "colors": {"primary": "#FF69B4", "secondary": "#FFD700", "accent": "#8A2BE2"},
+      "rarity": "legendary"
+    }
+  ],
+
+  "generation_rules": {
+    "rarity_weights": {
+      "common": 50,
+      "uncommon": 30,
+      "rare": 15,
+      "legendary": 5
+    },
+    "part_count_by_rarity": {
+      "common": {"min": 6, "max": 8},
+      "uncommon": {"min": 7, "max": 9},
+      "rare": {"min": 8, "max": 10},
+      "legendary": {"min": 9, "max": 10}
+    },
+    "name_generation": {
+      "adjectives": ["Golden", "Shadow", "Bright", "Dark", "Swift", "Mystic", "Crystal", "Fluffy", "Tiny", "Mighty"],
+      "nouns": ["Pup", "Kitty", "Dragon", "Bunny", "Wolf", "Bear", "Fox", "Owl", "Robot", "Phoenix"]
+    }
+  }
+}

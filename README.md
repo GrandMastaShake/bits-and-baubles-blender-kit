@@ -1,8 +1,93 @@
-# Bits and Baubles Builder Kit v1.0
+# Bits and Baubles Builder Kit v2.0
 
-## Modular Brick System for Blender -- Centuria Swarm Production
+## Modular Brick System + Adopt Me Pet Generator — Centuria Swarm Production
 
-A complete, self-contained B&B-style modular brick building system for Blender. Create houses, castles, bridges, vehicles, trees, and custom structures using 25 precisely-modeled brick types with automatic grid snapping, recipe-driven assembly, and structural validation.
+A complete, self-contained B&B-style modular brick building system for Blender **plus a full Adopt Me-style chibi pet generator**. Build houses, castles, dragons, and space stations with 25 brick types — or generate procedural low-poly pets from a 20-species catalog with neon support, proportion validation against the 10 Adopt Me design laws, and a mix-and-match parts engine.
+
+---
+
+## v2.0 — Adopt Me Pet Generator
+
+### One-Click Cat Demo
+
+Open `blender_cat_demo.py` in Blender's Scripting tab and press **Run Script**. Builds a standard orange tabby + neon version side-by-side with 3-point studio lighting and an 85mm portrait camera. Renders to `output/`.
+
+### Core Files Added in v2.0
+
+| File | What It Does |
+|------|-------------|
+| `am_pet_generator.py` | `AdoptMePetBuilder` — builds any of 20 species from `am_species.json`, full neon MixShader support, proportion validator |
+| `am_geometry.py` | bmesh geometry primitives (`make_chibi_head`, etc.) with HEAD_TO_BODY=0.65, EYE_TO_HEAD=0.18 |
+| `am_species.json` | 20 species catalog: dog, cat, bunny, dragon, shadow_dragon, unicorn, and more. Each species has full geometry, proportions, color, and neon config |
+| `pet_parts_system.json` | Mix-and-match parts library: 6 head types, 5 ear types, 5 eye types, 6 body types, 5 leg types, 6 tail types, 3 wing types, 3 horn types, 5 patterns |
+| `pet_builder.py` | `PetBuilder` — reads `pet_parts_system.json`, builds any combination of parts + 5 prebuilts (Golden Retriever, Shadow Wolf, Phoenix, Cyber Pup, Rainbow Unicorn) |
+| `expanded_demos.py` | 10 build recipes: original 5 + Space Station, Dragon, Treehouse, Robot, Full Castle |
+| `ai_part_idea_generator.py` | `PartIdeaGenerator` — generates new part concepts, hybridizes existing parts, elemental fusions, full pet backstory concepts |
+| `pet_generator.py` | Standalone 9-part cat generator (no JSON required, good for quick tests) |
+| `blender_cat_demo.py` | One-click launcher: clears scene, builds normal + neon cat, sets up lighting/camera/renderer |
+
+### Quick API
+
+```python
+import sys
+sys.path.insert(0, r"path/to/bits_and_baubles")
+
+from am_pet_generator import AdoptMePetBuilder
+
+builder = AdoptMePetBuilder()
+
+# Build any species (neon optional)
+builder.build_pet("cat",           neon=False, location=(0, 0, 0))
+builder.build_pet("cat",           neon=True,  location=(8, 0, 0))
+builder.build_pet("dragon",        neon=False, location=(16, 0, 0))
+builder.build_pet("shadow_dragon", neon=True,  location=(24, 0, 0))
+
+# Validate proportions against the 10 Adopt Me design laws
+builder.validate_proportions("cat")
+
+# Build a grid of all species
+builder.demo_build_grid()
+
+# One of each rarity tier
+builder.demo_one_of_each_rarity()
+```
+
+```python
+from pet_builder import PetBuilder
+
+builder = PetBuilder()
+
+# Build a prebuilt
+builder.build_prebuilt("Rainbow Unicorn", offset=(0, 0, 0))
+
+# Mix-and-match custom
+builder.build_from_parts({
+    "head": "head_round",
+    "ears": "ears_pointy",
+    "eyes": "eyes_sparkle",
+    "body": "body_chubby",
+    "legs": "legs_short",
+    "tail": "tail_fluffy",
+    "horns": "horns_unicorn",
+    "pattern": "pattern_galaxy"
+}, colors={"primary": "#FF69B4", "secondary": "#FFD700"})
+
+# Random pet of any rarity
+builder.build_random("legendary")
+```
+
+### The 10 Adopt Me Design Laws (enforced by validator)
+
+1. HEAD > BODY — head 60–70% of body size
+2. CIRCLES ONLY — no sharp silhouettes on primary shapes
+3. NO ANGRY PETS — expressions must be friendly/neutral
+4. TINY FEET — feet 16–25% of body height
+5. NO NECK — head clips into body, zero gap
+6. COLOR = RARITY — neon/ultra-rare palette signals tier
+7. HEAD = IDENTITY — species recognition lives in head shape
+8. SHARP = SOFTENED — hard edges beveled or rounded
+9. GLOW = STATUS — emissive materials reserved for rare+
+10. SIMPLE = UNIVERSAL — readable at 50px thumbnail size
 
 ---
 

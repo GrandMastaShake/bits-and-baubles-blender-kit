@@ -1,0 +1,1697 @@
+{
+  "version": "1.0.0",
+  "catalog_name": "Adopt-Me Style Pet Species Catalog",
+  "design_rules": {
+    "head_to_body_ratio": "0.60 - 0.70",
+    "eye_to_head_ratio": "0.15 - 0.20",
+    "foot_to_body_ratio": "0.16 - 0.25",
+    "ear_to_head_ratio": "0.30 - 0.50",
+    "tail_to_body_ratio": "0.50 - 0.80",
+    "max_colors": 3,
+    "style": "chibi",
+    "neck": false,
+    "head_clips_into_body": true
+  },
+  "species": [
+    {
+      "species_id": "dog",
+      "name": "Dog",
+      "display_name": "Puppy",
+      "rarity": "common",
+      "family": "domestic",
+      "geometry": {
+        "head": {
+          "style": "round",
+          "scale": 1.0,
+          "color": "#D2B48C"
+        },
+        "body": {
+          "style": "chubby",
+          "scale": 1.0,
+          "color": "#D2B48C"
+        },
+        "eyes": {
+          "scale": 0.18,
+          "color": "#000000",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.25,
+          "color": "#C19A6B",
+          "count": 4
+        },
+        "ears": {
+          "style": "floppy",
+          "color": "#C19A6B",
+          "length": "long"
+        },
+        "tail": {
+          "style": "puff",
+          "color": "#D2B48C",
+          "length": 0.8
+        },
+        "snout": {
+          "style": "long",
+          "color": "#8B4513",
+          "scale": 0.3
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.68,
+        "eye_to_head": 0.18,
+        "foot_to_body": 0.25,
+        "ear_to_head": 0.45,
+        "tail_to_body": 0.65
+      },
+      "colors": {
+        "primary": "#D2B48C",
+        "secondary": "#C19A6B",
+        "accent": "#8B4513"
+      },
+      "neon_config": {
+        "glow_color": "#FFD700",
+        "glow_parts": [
+          "collar",
+          "tail_tip"
+        ],
+        "glow_intensity": 0.4
+      },
+      "description": "A loyal puppy with floppy ears and a wagging tail. Loves belly rubs and chasing sticks.",
+      "tags": [
+        "domestic",
+        "mammal",
+        "loyal",
+        "playful"
+      ]
+    },
+    {
+      "species_id": "cat",
+      "name": "Cat",
+      "display_name": "Kitty",
+      "rarity": "common",
+      "family": "domestic",
+      "geometry": {
+        "head": {
+          "style": "round",
+          "scale": 1.0,
+          "color": "#FFA500"
+        },
+        "body": {
+          "style": "slim",
+          "scale": 1.0,
+          "color": "#FFA500"
+        },
+        "eyes": {
+          "scale": 0.16,
+          "color": "#000000",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.2,
+          "color": "#FFA500",
+          "count": 4
+        },
+        "ears": {
+          "style": "pointy",
+          "color": "#FFA500",
+          "length": "medium"
+        },
+        "tail": {
+          "style": "curved",
+          "color": "#FFA500",
+          "length": 1.0
+        },
+        "snout": {
+          "style": "short",
+          "color": "#FFB84D",
+          "scale": 0.15
+        },
+        "whiskers": {
+          "style": "thin_lines",
+          "color": "#FFFFFF",
+          "count": 6
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.65,
+        "eye_to_head": 0.16,
+        "foot_to_body": 0.2,
+        "ear_to_head": 0.4,
+        "tail_to_body": 0.75
+      },
+      "colors": {
+        "primary": "#FFA500",
+        "secondary": "#FFB84D",
+        "accent": "#FFFFFF"
+      },
+      "neon_config": {
+        "glow_color": "#FF69B4",
+        "glow_parts": [
+          "eyes",
+          "collar"
+        ],
+        "glow_intensity": 0.4
+      },
+      "description": "A curious kitty with pointy ears and a swishing tail. Purrs when happy.",
+      "tags": [
+        "domestic",
+        "mammal",
+        "curious",
+        "independent"
+      ]
+    },
+    {
+      "species_id": "bunny",
+      "name": "Bunny",
+      "display_name": "Bunny",
+      "rarity": "common",
+      "family": "domestic",
+      "geometry": {
+        "head": {
+          "style": "round",
+          "scale": 1.0,
+          "color": "#FFFFFF"
+        },
+        "body": {
+          "style": "chubby",
+          "scale": 1.0,
+          "color": "#FFFFFF"
+        },
+        "eyes": {
+          "scale": 0.17,
+          "color": "#000000",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.22,
+          "color": "#FFB6C1",
+          "count": 4
+        },
+        "ears": {
+          "style": "floppy_long",
+          "color": "#FFB6C1",
+          "length": "very_long"
+        },
+        "tail": {
+          "style": "puff",
+          "color": "#FFFFFF",
+          "length": 0.3
+        },
+        "snout": {
+          "style": "short",
+          "color": "#FFB6C1",
+          "scale": 0.12
+        },
+        "nose": {
+          "style": "small_round",
+          "color": "#FF69B4"
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.7,
+        "eye_to_head": 0.17,
+        "foot_to_body": 0.22,
+        "ear_to_head": 0.85,
+        "tail_to_body": 0.25
+      },
+      "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#FFB6C1",
+        "accent": "#FF69B4"
+      },
+      "neon_config": {
+        "glow_color": "#FFB6C1",
+        "glow_parts": [
+          "ears",
+          "nose"
+        ],
+        "glow_intensity": 0.4
+      },
+      "description": "A soft bunny with long floppy ears and a tiny cotton tail. Loves carrots and hopping around.",
+      "tags": [
+        "domestic",
+        "mammal",
+        "gentle",
+        "hoppy"
+      ]
+    },
+    {
+      "species_id": "bear",
+      "name": "Bear",
+      "display_name": "Bear Cub",
+      "rarity": "common",
+      "family": "wild",
+      "geometry": {
+        "head": {
+          "style": "round",
+          "scale": 1.0,
+          "color": "#8B6914"
+        },
+        "body": {
+          "style": "chubby",
+          "scale": 1.0,
+          "color": "#8B6914"
+        },
+        "eyes": {
+          "scale": 0.15,
+          "color": "#000000",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.25,
+          "color": "#D2B48C",
+          "count": 4
+        },
+        "ears": {
+          "style": "round",
+          "color": "#D2B48C",
+          "length": "short"
+        },
+        "tail": {
+          "style": "puff",
+          "color": "#8B6914",
+          "length": 0.4
+        },
+        "snout": {
+          "style": "broad",
+          "color": "#D2B48C",
+          "scale": 0.35
+        },
+        "nose": {
+          "style": "round",
+          "color": "#2F1810"
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.7,
+        "eye_to_head": 0.15,
+        "foot_to_body": 0.25,
+        "ear_to_head": 0.3,
+        "tail_to_body": 0.3
+      },
+      "colors": {
+        "primary": "#8B6914",
+        "secondary": "#D2B48C",
+        "accent": "#2F1810"
+      },
+      "neon_config": {
+        "glow_color": "#FFA500",
+        "glow_parts": [
+          "ears",
+          "paws"
+        ],
+        "glow_intensity": 0.4
+      },
+      "description": "A cuddly bear cub with round ears and a chubby belly. Loves honey and naps.",
+      "tags": [
+        "wild",
+        "mammal",
+        "cuddly",
+        "strong"
+      ]
+    },
+    {
+      "species_id": "chicken",
+      "name": "Chicken",
+      "display_name": "Chick",
+      "rarity": "common",
+      "family": "farm",
+      "geometry": {
+        "head": {
+          "style": "round",
+          "scale": 1.0,
+          "color": "#FFFFFF"
+        },
+        "body": {
+          "style": "stubby",
+          "scale": 1.0,
+          "color": "#FFFFFF"
+        },
+        "eyes": {
+          "scale": 0.18,
+          "color": "#000000",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.18,
+          "color": "#FFA500",
+          "count": 2
+        },
+        "beak": {
+          "style": "small_triangle",
+          "color": "#FFA500",
+          "scale": 0.15
+        },
+        "comb": {
+          "style": "small_red_crown",
+          "color": "#FF0000",
+          "scale": 0.2
+        },
+        "wattle": {
+          "style": "small_dangle",
+          "color": "#FF0000",
+          "scale": 0.1
+        },
+        "tail": {
+          "style": "none",
+          "color": "#FFFFFF",
+          "length": 0.0
+        },
+        "wings": {
+          "style": "small_flaps",
+          "color": "#FFFFFF",
+          "scale": 0.4
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.62,
+        "eye_to_head": 0.18,
+        "foot_to_body": 0.18,
+        "ear_to_head": 0.0,
+        "tail_to_body": 0.0
+      },
+      "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#FFA500",
+        "accent": "#FF0000"
+      },
+      "neon_config": {
+        "glow_color": "#FF0000",
+        "glow_parts": [
+          "comb",
+          "wattle"
+        ],
+        "glow_intensity": 0.4
+      },
+      "description": "A fluffy little chick with tiny wings and orange feet. Goes 'peep peep' when excited.",
+      "tags": [
+        "farm",
+        "avian",
+        "small",
+        "cheerful"
+      ]
+    },
+    {
+      "species_id": "fox",
+      "name": "Fox",
+      "display_name": "Fox",
+      "rarity": "uncommon",
+      "family": "wild",
+      "geometry": {
+        "head": {
+          "style": "triangular_round",
+          "scale": 1.0,
+          "color": "#FF6600"
+        },
+        "body": {
+          "style": "slim",
+          "scale": 1.0,
+          "color": "#FF6600"
+        },
+        "eyes": {
+          "scale": 0.17,
+          "color": "#000000",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.2,
+          "color": "#1A1A1A",
+          "count": 4
+        },
+        "ears": {
+          "style": "pointy",
+          "color": "#1A1A1A",
+          "length": "medium"
+        },
+        "tail": {
+          "style": "fluffy",
+          "color": "#FFFFFF",
+          "length": 1.0,
+          "tip_color": "#FFFFFF"
+        },
+        "snout": {
+          "style": "long",
+          "color": "#1A1A1A",
+          "scale": 0.3
+        },
+        "chest_fur": {
+          "style": "white_patch",
+          "color": "#FFFFFF"
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.6,
+        "eye_to_head": 0.17,
+        "foot_to_body": 0.2,
+        "ear_to_head": 0.48,
+        "tail_to_body": 0.75
+      },
+      "colors": {
+        "primary": "#FF6600",
+        "secondary": "#FFFFFF",
+        "accent": "#1A1A1A"
+      },
+      "neon_config": {
+        "glow_color": "#FF4500",
+        "glow_parts": [
+          "tail_tip",
+          "ears"
+        ],
+        "glow_intensity": 0.6
+      },
+      "description": "A clever fox with a bushy white-tipped tail and pointy ears. Loves sneaking around.",
+      "tags": [
+        "wild",
+        "mammal",
+        "clever",
+        "sly"
+      ]
+    },
+    {
+      "species_id": "penguin",
+      "name": "Penguin",
+      "display_name": "Penguin",
+      "rarity": "uncommon",
+      "family": "wild",
+      "geometry": {
+        "head": {
+          "style": "round",
+          "scale": 1.0,
+          "color": "#1A1A1A"
+        },
+        "body": {
+          "style": "chubby",
+          "scale": 1.0,
+          "color": "#1A1A1A"
+        },
+        "eyes": {
+          "scale": 0.16,
+          "color": "#000000",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.22,
+          "color": "#FFA500",
+          "count": 2
+        },
+        "beak": {
+          "style": "short_triangle",
+          "color": "#FFA500",
+          "scale": 0.18
+        },
+        "belly": {
+          "style": "white_patch",
+          "color": "#FFFFFF"
+        },
+        "tail": {
+          "style": "stub",
+          "color": "#1A1A1A",
+          "length": 0.2
+        },
+        "flippers": {
+          "style": "wings",
+          "color": "#1A1A1A",
+          "scale": 0.5
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.65,
+        "eye_to_head": 0.16,
+        "foot_to_body": 0.22,
+        "ear_to_head": 0.0,
+        "tail_to_body": 0.15
+      },
+      "colors": {
+        "primary": "#1A1A1A",
+        "secondary": "#FFFFFF",
+        "accent": "#FFA500"
+      },
+      "neon_config": {
+        "glow_color": "#00CED1",
+        "glow_parts": [
+          "belly",
+          "beak"
+        ],
+        "glow_intensity": 0.6
+      },
+      "description": "A waddly penguin in a tiny tuxedo-like suit. Loves sliding on its belly in the snow.",
+      "tags": [
+        "wild",
+        "avian",
+        "cold",
+        "waddly"
+      ]
+    },
+    {
+      "species_id": "deer",
+      "name": "Deer",
+      "display_name": "Fawn",
+      "rarity": "uncommon",
+      "family": "wild",
+      "geometry": {
+        "head": {
+          "style": "oval",
+          "scale": 1.0,
+          "color": "#A0522D"
+        },
+        "body": {
+          "style": "slim",
+          "scale": 1.0,
+          "color": "#A0522D"
+        },
+        "eyes": {
+          "scale": 0.18,
+          "color": "#000000",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.2,
+          "color": "#8B4513",
+          "count": 4
+        },
+        "ears": {
+          "style": "floppy",
+          "color": "#A0522D",
+          "length": "medium"
+        },
+        "antlers": {
+          "style": "branching",
+          "color": "#D2B48C",
+          "scale": 0.6,
+          "points": 4
+        },
+        "tail": {
+          "style": "short_fluffy",
+          "color": "#FFFFFF",
+          "length": 0.4
+        },
+        "snout": {
+          "style": "long",
+          "color": "#8B4513",
+          "scale": 0.25
+        },
+        "spots": {
+          "style": "white_dots",
+          "color": "#FFFFFF",
+          "count": 6
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.62,
+        "eye_to_head": 0.18,
+        "foot_to_body": 0.2,
+        "ear_to_head": 0.35,
+        "tail_to_body": 0.3
+      },
+      "colors": {
+        "primary": "#A0522D",
+        "secondary": "#FFFFFF",
+        "accent": "#D2B48C"
+      },
+      "neon_config": {
+        "glow_color": "#98FB98",
+        "glow_parts": [
+          "antlers",
+          "spots"
+        ],
+        "glow_intensity": 0.6
+      },
+      "description": "A gentle fawn with spotted flanks and tiny antlers. Prances gracefully through meadows.",
+      "tags": [
+        "wild",
+        "mammal",
+        "gentle",
+        "graceful"
+      ]
+    },
+    {
+      "species_id": "pig",
+      "name": "Pig",
+      "display_name": "Piglet",
+      "rarity": "uncommon",
+      "family": "farm",
+      "geometry": {
+        "head": {
+          "style": "round",
+          "scale": 1.0,
+          "color": "#FFB6C1"
+        },
+        "body": {
+          "style": "chubby",
+          "scale": 1.0,
+          "color": "#FFB6C1"
+        },
+        "eyes": {
+          "scale": 0.15,
+          "color": "#000000",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.22,
+          "color": "#FFB6C1",
+          "count": 4
+        },
+        "ears": {
+          "style": "floppy",
+          "color": "#FF69B4",
+          "length": "medium"
+        },
+        "tail": {
+          "style": "curly",
+          "color": "#FF69B4",
+          "length": 0.6
+        },
+        "snout": {
+          "style": "broad_round",
+          "color": "#FF69B4",
+          "scale": 0.35
+        },
+        "nose": {
+          "style": "oval",
+          "color": "#C71585"
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.7,
+        "eye_to_head": 0.15,
+        "foot_to_body": 0.22,
+        "ear_to_head": 0.35,
+        "tail_to_body": 0.35
+      },
+      "colors": {
+        "primary": "#FFB6C1",
+        "secondary": "#FF69B4",
+        "accent": "#C71585"
+      },
+      "neon_config": {
+        "glow_color": "#FF69B4",
+        "glow_parts": [
+          "snout",
+          "tail"
+        ],
+        "glow_intensity": 0.6
+      },
+      "description": "A chubby piglet with a curly tail and a round snout. Oinks happily when fed treats.",
+      "tags": [
+        "farm",
+        "mammal",
+        "chubby",
+        "messy"
+      ]
+    },
+    {
+      "species_id": "owl",
+      "name": "Owl",
+      "display_name": "Owlet",
+      "rarity": "uncommon",
+      "family": "wild",
+      "geometry": {
+        "head": {
+          "style": "round",
+          "scale": 1.0,
+          "color": "#8B7355"
+        },
+        "body": {
+          "style": "chubby",
+          "scale": 1.0,
+          "color": "#8B7355"
+        },
+        "eyes": {
+          "scale": 0.2,
+          "color": "#FFD700",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.18,
+          "color": "#D2B48C",
+          "count": 2
+        },
+        "beak": {
+          "style": "small_triangle",
+          "color": "#FFA500",
+          "scale": 0.12
+        },
+        "ear_tufts": {
+          "style": "pointy_tufts",
+          "color": "#8B7355",
+          "length": "short"
+        },
+        "wings": {
+          "style": "folded",
+          "color": "#A08060",
+          "scale": 0.6
+        },
+        "face_disc": {
+          "style": "oval_mask",
+          "color": "#A08060",
+          "scale": 0.8
+        },
+        "tail": {
+          "style": "short",
+          "color": "#8B7355",
+          "length": 0.3
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.65,
+        "eye_to_head": 0.2,
+        "foot_to_body": 0.18,
+        "ear_to_head": 0.25,
+        "tail_to_body": 0.2
+      },
+      "colors": {
+        "primary": "#8B7355",
+        "secondary": "#A08060",
+        "accent": "#FFD700"
+      },
+      "neon_config": {
+        "glow_color": "#FFD700",
+        "glow_parts": [
+          "eyes",
+          "beak"
+        ],
+        "glow_intensity": 0.6
+      },
+      "description": "A wise little owlet with golden eyes and fluffy ear tufts. Hoots at the moon.",
+      "tags": [
+        "wild",
+        "avian",
+        "wise",
+        "nocturnal"
+      ]
+    },
+    {
+      "species_id": "dragon",
+      "name": "Dragon",
+      "display_name": "Dragon",
+      "rarity": "rare",
+      "family": "mythical",
+      "geometry": {
+        "head": {
+          "style": "angular_round",
+          "scale": 1.0,
+          "color": "#2E8B57"
+        },
+        "body": {
+          "style": "slim",
+          "scale": 1.0,
+          "color": "#2E8B57"
+        },
+        "eyes": {
+          "scale": 0.17,
+          "color": "#FFD700",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.22,
+          "color": "#1A5C38",
+          "count": 4
+        },
+        "ears": {
+          "style": "pointy",
+          "color": "#2E8B57",
+          "length": "medium"
+        },
+        "horns": {
+          "style": "curved",
+          "color": "#DAA520",
+          "count": 2,
+          "scale": 0.5
+        },
+        "tail": {
+          "style": "spiked",
+          "color": "#2E8B57",
+          "length": 1.2,
+          "spike_color": "#DAA520"
+        },
+        "wings": {
+          "style": "dragon",
+          "color": "#1A5C38",
+          "scale": 1.0
+        },
+        "snout": {
+          "style": "long",
+          "color": "#1A5C38",
+          "scale": 0.3
+        },
+        "nostrils": {
+          "style": "small_round",
+          "color": "#FF4500"
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.62,
+        "eye_to_head": 0.17,
+        "foot_to_body": 0.22,
+        "ear_to_head": 0.4,
+        "tail_to_body": 0.8
+      },
+      "colors": {
+        "primary": "#2E8B57",
+        "secondary": "#1A5C38",
+        "accent": "#DAA520"
+      },
+      "neon_config": {
+        "glow_color": "#FFD700",
+        "glow_parts": [
+          "horns",
+          "eyes",
+          "nostrils",
+          "wing_membranes"
+        ],
+        "glow_intensity": 0.8
+      },
+      "description": "A majestic dragon with golden horns and emerald scales. Breathes tiny puffs of flame.",
+      "tags": [
+        "mythical",
+        "reptile",
+        "magical",
+        "powerful"
+      ]
+    },
+    {
+      "species_id": "unicorn",
+      "name": "Unicorn",
+      "display_name": "Unicorn",
+      "rarity": "rare",
+      "family": "mythical",
+      "geometry": {
+        "head": {
+          "style": "horse_round",
+          "scale": 1.0,
+          "color": "#FFFFFF"
+        },
+        "body": {
+          "style": "slim",
+          "scale": 1.0,
+          "color": "#FFFFFF"
+        },
+        "eyes": {
+          "scale": 0.16,
+          "color": "#4169E1",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.2,
+          "color": "#FFFFFF",
+          "count": 4
+        },
+        "ears": {
+          "style": "round",
+          "color": "#FFB6C1",
+          "length": "medium"
+        },
+        "horn": {
+          "style": "spiral",
+          "color": "#FFD700",
+          "scale": 0.6,
+          "position": "forehead"
+        },
+        "tail": {
+          "style": "fluffy",
+          "color": "#FFB6C1",
+          "length": 0.9
+        },
+        "mane": {
+          "style": "flowing",
+          "color": "#FFB6C1",
+          "scale": 0.4
+        },
+        "snout": {
+          "style": "long",
+          "color": "#FFE4E1",
+          "scale": 0.25
+        },
+        "hooves": {
+          "style": "round",
+          "color": "#FFD700"
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.63,
+        "eye_to_head": 0.16,
+        "foot_to_body": 0.2,
+        "ear_to_head": 0.35,
+        "tail_to_body": 0.55
+      },
+      "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#FFB6C1",
+        "accent": "#FFD700"
+      },
+      "neon_config": {
+        "glow_color": "#FF69B4",
+        "glow_parts": [
+          "horn",
+          "hooves",
+          "mane"
+        ],
+        "glow_intensity": 0.8
+      },
+      "description": "A magical unicorn with a golden spiral horn and a flowing pink mane. Grants small wishes.",
+      "tags": [
+        "mythical",
+        "mammal",
+        "magical",
+        "pure"
+      ]
+    },
+    {
+      "species_id": "phoenix",
+      "name": "Phoenix",
+      "display_name": "Phoenix",
+      "rarity": "rare",
+      "family": "mythical",
+      "geometry": {
+        "head": {
+          "style": "round",
+          "scale": 1.0,
+          "color": "#FF4500"
+        },
+        "body": {
+          "style": "slim",
+          "scale": 1.0,
+          "color": "#FF6347"
+        },
+        "eyes": {
+          "scale": 0.17,
+          "color": "#FFD700",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.2,
+          "color": "#FFD700",
+          "count": 2
+        },
+        "beak": {
+          "style": "curved",
+          "color": "#FFD700",
+          "scale": 0.18
+        },
+        "wings": {
+          "style": "large_feathered",
+          "color": "#FF4500",
+          "scale": 1.2
+        },
+        "tail": {
+          "style": "feather_cascade",
+          "color": "#FFD700",
+          "length": 1.5
+        },
+        "crest": {
+          "style": "flame",
+          "color": "#FFD700",
+          "scale": 0.3
+        },
+        "wing_tips": {
+          "style": "feathered",
+          "color": "#FFD700"
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.6,
+        "eye_to_head": 0.17,
+        "foot_to_body": 0.2,
+        "ear_to_head": 0.0,
+        "tail_to_body": 0.9
+      },
+      "colors": {
+        "primary": "#FF4500",
+        "secondary": "#FFD700",
+        "accent": "#FF6347"
+      },
+      "neon_config": {
+        "glow_color": "#FF4500",
+        "glow_parts": [
+          "crest",
+          "wing_tips",
+          "tail_feathers",
+          "eyes"
+        ],
+        "glow_intensity": 0.8
+      },
+      "description": "A blazing phoenix with fiery wings and golden tail feathers. Rises from ashes.",
+      "tags": [
+        "mythical",
+        "avian",
+        "fire",
+        "rebirth"
+      ]
+    },
+    {
+      "species_id": "wolf",
+      "name": "Wolf",
+      "display_name": "Wolf Pup",
+      "rarity": "rare",
+      "family": "wild",
+      "geometry": {
+        "head": {
+          "style": "triangular",
+          "scale": 1.0,
+          "color": "#808080"
+        },
+        "body": {
+          "style": "slim",
+          "scale": 1.0,
+          "color": "#808080"
+        },
+        "eyes": {
+          "scale": 0.17,
+          "color": "#FFD700",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.22,
+          "color": "#696969",
+          "count": 4
+        },
+        "ears": {
+          "style": "pointy",
+          "color": "#808080",
+          "length": "tall"
+        },
+        "tail": {
+          "style": "fluffy",
+          "color": "#D3D3D3",
+          "length": 0.9,
+          "tip_color": "#FFFFFF"
+        },
+        "snout": {
+          "style": "long",
+          "color": "#696969",
+          "scale": 0.3
+        },
+        "chest": {
+          "style": "white_patch",
+          "color": "#FFFFFF"
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.6,
+        "eye_to_head": 0.17,
+        "foot_to_body": 0.22,
+        "ear_to_head": 0.5,
+        "tail_to_body": 0.7
+      },
+      "colors": {
+        "primary": "#808080",
+        "secondary": "#D3D3D3",
+        "accent": "#FFD700"
+      },
+      "neon_config": {
+        "glow_color": "#00BFFF",
+        "glow_parts": [
+          "eyes",
+          "chest"
+        ],
+        "glow_intensity": 0.8
+      },
+      "description": "A fierce wolf pup with golden eyes and a bushy tail. Howls at the moon at night.",
+      "tags": [
+        "wild",
+        "mammal",
+        "loyal",
+        "fierce"
+      ]
+    },
+    {
+      "species_id": "elephant",
+      "name": "Elephant",
+      "display_name": "Baby Elephant",
+      "rarity": "rare",
+      "family": "wild",
+      "geometry": {
+        "head": {
+          "style": "round",
+          "scale": 1.0,
+          "color": "#9B9B9B"
+        },
+        "body": {
+          "style": "chubby",
+          "scale": 1.0,
+          "color": "#9B9B9B"
+        },
+        "eyes": {
+          "scale": 0.15,
+          "color": "#000000",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.25,
+          "color": "#808080",
+          "count": 4
+        },
+        "ears": {
+          "style": "floppy_large",
+          "color": "#A9A9A9",
+          "length": "very_large"
+        },
+        "trunk": {
+          "style": "long_curved",
+          "color": "#9B9B9B",
+          "scale": 0.8
+        },
+        "tail": {
+          "style": "short_thin",
+          "color": "#808080",
+          "length": 0.3
+        },
+        "tusks": {
+          "style": "small_curved",
+          "color": "#FFFFF0",
+          "scale": 0.15
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.7,
+        "eye_to_head": 0.15,
+        "foot_to_body": 0.25,
+        "ear_to_head": 0.9,
+        "tail_to_body": 0.15
+      },
+      "colors": {
+        "primary": "#9B9B9B",
+        "secondary": "#A9A9A9",
+        "accent": "#FFFFF0"
+      },
+      "neon_config": {
+        "glow_color": "#87CEEB",
+        "glow_parts": [
+          "tusks",
+          "trunk_tip"
+        ],
+        "glow_intensity": 0.8
+      },
+      "description": "A baby elephant with oversized floppy ears and a wiggly trunk. Trumpets when happy.",
+      "tags": [
+        "wild",
+        "mammal",
+        "gentle",
+        "intelligent"
+      ]
+    },
+    {
+      "species_id": "shadow_dragon",
+      "name": "Shadow Dragon",
+      "display_name": "Shadow Dragon",
+      "rarity": "legendary",
+      "family": "mythical",
+      "geometry": {
+        "head": {
+          "style": "angular",
+          "scale": 1.0,
+          "color": "#0A0A0A"
+        },
+        "body": {
+          "style": "slim",
+          "scale": 1.0,
+          "color": "#0A0A0A"
+        },
+        "eyes": {
+          "scale": 0.18,
+          "color": "#FF0000",
+          "highlight": false
+        },
+        "feet": {
+          "scale": 0.22,
+          "color": "#1A0000",
+          "count": 4
+        },
+        "ears": {
+          "style": "pointy",
+          "color": "#0A0A0A",
+          "length": "medium"
+        },
+        "horns": {
+          "style": "twisted",
+          "color": "#330000",
+          "count": 2,
+          "scale": 0.6
+        },
+        "tail": {
+          "style": "spiked",
+          "color": "#0A0A0A",
+          "length": 1.5,
+          "spike_color": "#FF0000"
+        },
+        "wings": {
+          "style": "shadow",
+          "color": "#1A0000",
+          "scale": 1.2
+        },
+        "snout": {
+          "style": "long",
+          "color": "#0A0A0A",
+          "scale": 0.3
+        },
+        "aura": {
+          "style": "smoke",
+          "color": "#330000",
+          "scale": 0.3
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.6,
+        "eye_to_head": 0.18,
+        "foot_to_body": 0.22,
+        "ear_to_head": 0.4,
+        "tail_to_body": 0.85
+      },
+      "colors": {
+        "primary": "#0A0A0A",
+        "secondary": "#1A0000",
+        "accent": "#FF0000"
+      },
+      "neon_config": {
+        "glow_color": "#FF0000",
+        "glow_parts": [
+          "eyes",
+          "horns",
+          "wing_edges",
+          "tail_spikes",
+          "aura"
+        ],
+        "glow_intensity": 1.0
+      },
+      "description": "A legendary shadow dragon born from eternal darkness. Its red eyes pierce the void and its wings blot out the stars.",
+      "tags": [
+        "mythical",
+        "reptile",
+        "dark",
+        "powerful",
+        "legendary"
+      ]
+    },
+    {
+      "species_id": "frost_dragon",
+      "name": "Frost Dragon",
+      "display_name": "Frost Dragon",
+      "rarity": "legendary",
+      "family": "mythical",
+      "geometry": {
+        "head": {
+          "style": "angular_round",
+          "scale": 1.0,
+          "color": "#E0FFFF"
+        },
+        "body": {
+          "style": "slim",
+          "scale": 1.0,
+          "color": "#F0F8FF"
+        },
+        "eyes": {
+          "scale": 0.17,
+          "color": "#00BFFF",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.22,
+          "color": "#B0E0E6",
+          "count": 4
+        },
+        "ears": {
+          "style": "pointy",
+          "color": "#E0FFFF",
+          "length": "medium"
+        },
+        "horns": {
+          "style": "icicle",
+          "color": "#87CEEB",
+          "count": 2,
+          "scale": 0.5
+        },
+        "tail": {
+          "style": "spiked",
+          "color": "#E0FFFF",
+          "length": 1.3,
+          "spike_color": "#00BFFF"
+        },
+        "wings": {
+          "style": "crystal",
+          "color": "#B0E0E6",
+          "scale": 1.2
+        },
+        "snout": {
+          "style": "long",
+          "color": "#E0FFFF",
+          "scale": 0.28
+        },
+        "crystal_spikes": {
+          "style": "ice",
+          "color": "#00BFFF",
+          "scale": 0.4,
+          "back": true
+        },
+        "breath": {
+          "style": "frost_mist",
+          "color": "#B0E0E6"
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.62,
+        "eye_to_head": 0.17,
+        "foot_to_body": 0.22,
+        "ear_to_head": 0.4,
+        "tail_to_body": 0.8
+      },
+      "colors": {
+        "primary": "#E0FFFF",
+        "secondary": "#B0E0E6",
+        "accent": "#00BFFF"
+      },
+      "neon_config": {
+        "glow_color": "#00BFFF",
+        "glow_parts": [
+          "eyes",
+          "horns",
+          "wings",
+          "crystal_spikes",
+          "breath"
+        ],
+        "glow_intensity": 1.0
+      },
+      "description": "A legendary frost dragon forged in eternal ice. Its crystal wings shimmer and it breathes frozen mist.",
+      "tags": [
+        "mythical",
+        "reptile",
+        "ice",
+        "powerful",
+        "legendary"
+      ]
+    },
+    {
+      "species_id": "griffin",
+      "name": "Griffin",
+      "display_name": "Griffin",
+      "rarity": "legendary",
+      "family": "mythical",
+      "geometry": {
+        "head": {
+          "style": "eagle",
+          "scale": 1.0,
+          "color": "#DAA520"
+        },
+        "body": {
+          "style": "lion_chubby",
+          "scale": 1.0,
+          "color": "#DAA520"
+        },
+        "eyes": {
+          "scale": 0.17,
+          "color": "#FFD700",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.25,
+          "color": "#8B6914",
+          "count": 4
+        },
+        "beak": {
+          "style": "curved_hooked",
+          "color": "#333333",
+          "scale": 0.25
+        },
+        "wings": {
+          "style": "eagle_large",
+          "color": "#DAA520",
+          "scale": 1.3
+        },
+        "tail": {
+          "style": "lion_tuft",
+          "color": "#8B4513",
+          "length": 0.8
+        },
+        "ear_tufts": {
+          "style": "eagle",
+          "color": "#8B6914",
+          "length": "medium"
+        },
+        "crown": {
+          "style": "golden",
+          "color": "#FFD700",
+          "scale": 0.2
+        },
+        "back_legs": {
+          "style": "lion",
+          "color": "#8B4513"
+        },
+        "front_legs": {
+          "style": "eagle_talons",
+          "color": "#333333"
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.6,
+        "eye_to_head": 0.17,
+        "foot_to_body": 0.25,
+        "ear_to_head": 0.3,
+        "tail_to_body": 0.6
+      },
+      "colors": {
+        "primary": "#DAA520",
+        "secondary": "#8B4513",
+        "accent": "#FFD700"
+      },
+      "neon_config": {
+        "glow_color": "#FFD700",
+        "glow_parts": [
+          "crown",
+          "eyes",
+          "wing_tips",
+          "tail_tuft"
+        ],
+        "glow_intensity": 1.0
+      },
+      "description": "A majestic griffin with an eagle's head and a lion's body. Guardian of ancient treasures.",
+      "tags": [
+        "mythical",
+        "hybrid",
+        "regal",
+        "powerful",
+        "legendary"
+      ]
+    },
+    {
+      "species_id": "phoenix_reborn",
+      "name": "Phoenix Reborn",
+      "display_name": "Phoenix Reborn",
+      "rarity": "legendary",
+      "family": "mythical",
+      "geometry": {
+        "head": {
+          "style": "round",
+          "scale": 1.0,
+          "color": "#FF3300"
+        },
+        "body": {
+          "style": "slim",
+          "scale": 1.0,
+          "color": "#FF6600"
+        },
+        "eyes": {
+          "scale": 0.18,
+          "color": "#FFFFFF",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.2,
+          "color": "#FFD700",
+          "count": 2
+        },
+        "beak": {
+          "style": "curved",
+          "color": "#FFD700",
+          "scale": 0.2
+        },
+        "wings": {
+          "style": "massive_feathered",
+          "color": "#FF4500",
+          "scale": 1.5
+        },
+        "tail": {
+          "style": "feather_cascade_long",
+          "color": "#FFD700",
+          "length": 2.0
+        },
+        "crest": {
+          "style": "flame_crown",
+          "color": "#FFD700",
+          "scale": 0.4
+        },
+        "wing_tips": {
+          "style": "burning",
+          "color": "#FF0000"
+        },
+        "feather_gradient": {
+          "start": "#FF0000",
+          "mid": "#FF6600",
+          "end": "#FFD700"
+        },
+        "ember_particles": {
+          "style": "floating",
+          "color": "#FF4500",
+          "density": "high"
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.6,
+        "eye_to_head": 0.18,
+        "foot_to_body": 0.2,
+        "ear_to_head": 0.0,
+        "tail_to_body": 1.0
+      },
+      "colors": {
+        "primary": "#FF3300",
+        "secondary": "#FFD700",
+        "accent": "#FF6600"
+      },
+      "neon_config": {
+        "glow_color": "#FF4500",
+        "glow_parts": [
+          "whole_body",
+          "wings",
+          "tail",
+          "crest",
+          "ember_particles",
+          "eyes"
+        ],
+        "glow_intensity": 1.0
+      },
+      "description": "A legendary phoenix reborn from cosmic flames. Its feathers shift from red to gold and it trails embers through the sky.",
+      "tags": [
+        "mythical",
+        "avian",
+        "fire",
+        "rebirth",
+        "legendary"
+      ]
+    },
+    {
+      "species_id": "rainbow_unicorn",
+      "name": "Rainbow Unicorn",
+      "display_name": "Rainbow Unicorn",
+      "rarity": "legendary",
+      "family": "mythical",
+      "geometry": {
+        "head": {
+          "style": "horse_round",
+          "scale": 1.0,
+          "color": "#FFFFFF"
+        },
+        "body": {
+          "style": "slim",
+          "scale": 1.0,
+          "color": "#FFFFFF"
+        },
+        "eyes": {
+          "scale": 0.17,
+          "color": "#FF1493",
+          "highlight": true
+        },
+        "feet": {
+          "scale": 0.2,
+          "color": "#FFFFFF",
+          "count": 4
+        },
+        "ears": {
+          "style": "round",
+          "color": "#FFFFFF",
+          "length": "medium"
+        },
+        "horn": {
+          "style": "spiral_prismatic",
+          "color": "rainbow",
+          "scale": 0.7,
+          "position": "forehead"
+        },
+        "tail": {
+          "style": "fluffy_rainbow",
+          "color": "rainbow",
+          "length": 1.0
+        },
+        "mane": {
+          "style": "flowing_rainbow",
+          "color": "rainbow",
+          "scale": 0.5
+        },
+        "snout": {
+          "style": "long",
+          "color": "#FFE4E1",
+          "scale": 0.25
+        },
+        "hooves": {
+          "style": "round",
+          "color": "#C0C0C0"
+        },
+        "sparkle_particles": {
+          "style": "floating_stars",
+          "color": "rainbow",
+          "density": "high"
+        },
+        "wing_sparkles": {
+          "style": "shimmer",
+          "color": "rainbow"
+        }
+      },
+      "proportions": {
+        "head_to_body": 0.63,
+        "eye_to_head": 0.17,
+        "foot_to_body": 0.2,
+        "ear_to_head": 0.35,
+        "tail_to_body": 0.65
+      },
+      "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "rainbow",
+        "accent": "#C0C0C0",
+        "rainbow_sequence": [
+          "#FF0000",
+          "#FF7F00",
+          "#FFFF00",
+          "#00FF00",
+          "#0000FF",
+          "#4B0082",
+          "#9400D3"
+        ]
+      },
+      "neon_config": {
+        "glow_color": "rainbow",
+        "glow_parts": [
+          "horn",
+          "mane",
+          "tail",
+          "hooves",
+          "whole_body_outline",
+          "sparkle_particles"
+        ],
+        "glow_intensity": 1.0,
+        "rainbow_cycle": true
+      },
+      "description": "The most legendary of all - a rainbow unicorn with a prismatic horn and flowing rainbow mane. Grants magnificent wishes and leaves a trail of sparkles.",
+      "tags": [
+        "mythical",
+        "mammal",
+        "rainbow",
+        "magical",
+        "legendary",
+        "prismatic"
+      ]
+    }
+  ],
+  "metadata": {
+    "total_species": 20,
+    "tiers": {
+      "common": 5,
+      "uncommon": 5,
+      "rare": 5,
+      "legendary": 5
+    },
+    "families": {
+      "domestic": 3,
+      "wild": 5,
+      "farm": 2,
+      "mythical": 10
+    },
+    "last_updated": "2024-01-01"
+  }
+}
